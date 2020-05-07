@@ -1,2 +1,2 @@
-# tripleee
-Events + Hotels + Music
+# beaTaste
+Concerts + Food + Music
