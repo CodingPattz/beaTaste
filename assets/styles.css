@@ -1,0 +1,21 @@
+/* .img-container{
+    background-image: url("/img/piccover.jpg");
+    height: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.inner-container{
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: auto;
+} */
+
+h1{
+    font-family: rig-solid-bold-reverse,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
