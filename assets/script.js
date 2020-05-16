@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 //Search by artist name
 //You need to init var name with the name of the artist you want to search the music
@@ -19,12 +20,29 @@ $.ajax({
               videoPanel.html(iframeDiv);
               videoDiv.html(videoPanel);
           });
+=======
+var name = ""; 
+$.ajax({
+method: "GET",
+  url:"https://itunes.apple.com/search?term="+ name +"&limit=15",
+  async:true,
+  dataType: "json",
+}).then(function queryItunes(videoDiv){
+   
+        var url = getUrl('iTunes');
+        callApi(url).done(function(response){
+            var results = response.items;
+            var videoId = results[0].id.videoId;
+            var videoUrl  = "https://itunes.apple.com/search?term="+ name +"&limit=15";
+            var videoPanel = $("<div>").attr("class", "title");
+            var iframeDiv = $("<div>").attr("id", "artistName");;
+            var videoEmbed = $("<div>").attr({src: videoUrl}).appendTo(iframeDiv);
+            videoPanel.html(iframeDiv);
+            videoDiv.html(videoPanel); 
+        });
+>>>>>>> cebbf51ab6d32f14d37dc326818d3aa219e07968
 
 
-
-//Search by name
-//You need to init var name with the name of the show you want to search
-//Return: this function is going to return a json object, this object contain the result information
 function queryTicketMaster();
 var tmUrl= "https://app.ticketmaster.com/discovery/v2/events.json?keyword="+ name +"&apikey=ehRgdA75qJWmIRqm3f2mgKUam4YvcbTT";
 $.ajax({
@@ -54,6 +72,7 @@ $.ajax({
         var formattedAddress = venueStreet + "<br>" + venueCityandState + "<br>" + venueZip;
         var resultPanel = $("<div>").attr("class","content").attr("id", "eventInfo")
         var panelHeading = $("<div>").attr("class","content").appendTo(resultPanel)
+<<<<<<< HEAD
       });
 
 
@@ -84,12 +103,19 @@ $.ajax({
 //Return: this function is going to return a json object, this object contain the result information
 var city = "";
 $.ajax({
+=======
+                            }
+
+var city = ""; 
+$.ajax({      
+>>>>>>> cebbf51ab6d32f14d37dc326818d3aa219e07968
     url: "https://developers.zomato.com/api/v2.1/search?entity_type=city&q="+ city +"&count=15",
     dataType: 'json',
     async: true,
     method: "GET",
     beforeSend: function(xhr){xhr.setRequestHeader(
       'user-key', '510eec961d5fbd9619ba6454a2372118');},
+<<<<<<< HEAD
     success: function(response) {
       console.log(response.restaurants)
     }
@@ -145,3 +171,11 @@ $.ajax({
             $('#btnSearch').click()
         }
     }
+=======
+    success: function(response) { 
+    
+      console.log(response.restaurants) 
+    } 
+  });
+
+>>>>>>> cebbf51ab6d32f14d37dc326818d3aa219e07968
