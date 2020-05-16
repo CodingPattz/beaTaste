@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/styles.css">
     <!--Favicon-->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <!--JQuery-->
@@ -14,18 +16,10 @@
     <!--Fontawesome-->
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 
-    <!--Semantic UI-->
-    <!-- <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-    <script
-      src="https://code.jquery.com/jquery-3.1.1.min.js"
-      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-      crossorigin="anonymous"></script>
-    <script src="semantic/dist/semantic.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"> -->
-
     <title>beaTaste</title>
 </head>
 <body>
+
  <!--NavBar-->
   <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
@@ -35,40 +29,79 @@
     </div>
   </nav>
 <!--Header-->
-  <section class="hero is-black is-medium">
+  <section class="hero is-large is-black">
     <div class="hero-body">
       <div class="container has-text-centered">
-        <h1 class="title">
+        <h1 class="title is-1">
           Make Your Next Concert the Perfect Date Night with beaTaste
         </h1>
         <br>
         <!--Search Bar-->
-        <div class="container has-text-centered">
-          <div class="field is-grouped">
-            <p class="control is-expanded">
-              <input class="input is-danger is-medium" type="text" placeholder="Search by Artist, Event or Venue">
-            <p class="control">
-              <a class="button is-danger is-medium" id="searchBtn">
-                Search
-              </a>
+        <div class="container">
+              <div class="field is-grouped">
+                <p class="control is-expanded">
+                  <input class="input is-danger is-medium" type="text" placeholder="Search by Artist, Event or Venue" id="search">
+                <p class="control">
+                  <a class="button is-danger is-medium" id="btnSearch">
+                    Search
+                  </a>
+              </div>
+            </div>
           </div>
+      </div>
+  </section>
+  
+  <br>
+  <br>
+
+<!--Results-->
+<div class="container">
+  <div class="tile is-ancestor">
+    <div class="tile is-vertical is-8">
+      <div class="tile">
+        <div class="tile is-parent is-vertical" id="eventInfo">
+          <!-- <article class="tile is-child box"> 
+            <div class="content">
+              Event Results <p>
+            </div>
+          </article> -->
         </div>
       </div>
+      <div class="tile is-parent" id="artistInfo">
+        <!-- <article class="tile is-child box">
+          <p class="title" id="artistName"></p>
+          <div class="content" id="artistInfo">
+            Artists Results <p>
+          </div>
+        </article> -->
+      </div>
     </div>
-  </section>
-
-<!--Who it works Title-->
-<section class="hero is-danger">
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <h1 class="title">
-        How beaTaste works
-      </h1>
+    <div class="tile is-parent" id="restaurants">
+      <!-- <article class="tile is-child box">
+          <div class="content">
+            Restaurants Results <p>
+          </div>
+      </article> -->
     </div>
   </div>
-</section>
+</div>
 
 <br>
+<br>
+
+  <!--Who it works Title-->
+  <div class="container">
+    <section class="hero is-danger">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="title is-1">
+            How beaTaste works
+          </h1>
+        </div>
+      </div>
+    </section>
+  </div>
+
 <br>
 
 <!--Tiles / Who we are-->
@@ -106,9 +139,6 @@
 
 <br>
 <br>
-
-
-<br>
 <br>
 
   <!--Tiles / Content-->
@@ -117,7 +147,7 @@
 <section class="hero is-danger">
   <div class="hero-body">
     <div class="container has-text-centered">
-      <h1 class="title">
+      <h1 class="title is-1">
         Beat Bites
       </h1>
     </div>
@@ -189,7 +219,16 @@
       <p class="has-text-grey-light"> Copyright &copy; 2020</p>
     </div>
   </footer>
-      
+
+
+<!-- JQuery -->
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<!-- JavaScript File -->
+ <script src="assets/script.js"></script>
+
 </body>
 </html>
 
